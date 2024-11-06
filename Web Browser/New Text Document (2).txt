@@ -1,0 +1,14 @@
+
+            if (new Uri(e.Uri).Host.Contains("accounts.google.com"))
+            {
+                if (webengin.CoreWebView2 != null)
+                {
+                    var setting = webengin.CoreWebView2.Settings;
+                    if (setting.UserAgent != "chrome")
+                    {
+
+                        orignalUserAgent = setting.UserAgent;
+                    }
+                    setting.UserAgent = "chrome";
+                }
+            }

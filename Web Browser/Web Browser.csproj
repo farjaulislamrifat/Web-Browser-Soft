@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Web_Browser</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="2021011634104.jpg" />
+    <None Remove="add_bookmark_96px.png" />
+    <None Remove="back_96px.png" />
+    <None Remove="bookmark_96px.png" />
+    <None Remove="browser-web-icon.png" />
+    <None Remove="close_512px.png" />
+    <None Remove="close_96px.png" />
+    <None Remove="delete_bookmark_96px.png" />
+    <None Remove="faviconV2 %281%29.png" />
+    <None Remove="faviconV2.png" />
+    <None Remove="favorites_96px.png" />
+    <None Remove="forward_96px.png" />
+    <None Remove="icons8_google_480px_1.png" />
+    <None Remove="icons8_website_64.png" />
+    <None Remove="insert_column_96px.png" />
+    <None Remove="loginicon.png" />
+    <None Remove="maximize_button_64px.png" />
+    <None Remove="maximize_window_96px.png" />
+    <None Remove="minimize_window_96px.png" />
+    <None Remove="order_history_96px.png" />
+    <None Remove="refresh_96px.png" />
+    <None Remove="remove_96px.png" />
+    <None Remove="ubuntu-web-browser-icon-new-750x563.png" />
+    <None Remove="web %281%29.png" />
+    <None Remove="web.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.43" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1264.42" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.116" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="2021011634104.jpg" />
+    <Resource Include="add_bookmark_96px.png" />
+    <Resource Include="back_96px.png" />
+    <Resource Include="bookmark_96px.png" />
+    <Resource Include="browser-web-icon.png" />
+    <Resource Include="close_512px.png" />
+    <Resource Include="close_96px.png" />
+    <Resource Include="delete_bookmark_96px.png" />
+    <Resource Include="faviconV2 (1).png" />
+    <Resource Include="faviconV2.png" />
+    <Resource Include="favorites_96px.png" />
+    <Resource Include="forward_96px.png" />
+    <Resource Include="icons8_google_480px_1.png" />
+    <Resource Include="icons8_website_64.png" />
+    <Resource Include="insert_column_96px.png" />
+    <Resource Include="loginicon.png" />
+    <Resource Include="maximize_button_64px.png" />
+    <Resource Include="maximize_window_96px.png" />
+    <Resource Include="minimize_window_96px.png" />
+    <Resource Include="order_history_96px.png" />
+    <Resource Include="refresh_96px.png" />
+    <Resource Include="remove_96px.png" />
+    <Resource Include="ubuntu-web-browser-icon-new-750x563.png" />
+    <Resource Include="web (1).png" />
+    <Resource Include="web.png" />
+  </ItemGroup>
+
+</Project>

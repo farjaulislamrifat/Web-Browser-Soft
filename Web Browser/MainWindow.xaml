@@ -1,0 +1,117 @@
+﻿<Window x:Class="Web_Browser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Web_Browser"
+      
+        mc:Ignorable="d"
+        Title="R Browser" 
+        Height="700" Width="1300" 
+            Background="Black"  MinWidth="850" WindowState="Maximized"   Icon="/web.png" WindowStartupLocation="CenterOwner" Loaded="windowLoad" SizeChanged="mainWindowSizeChanged" Closed="windowClosed" >
+
+
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="Buttoneffect">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button" >
+                        <Border Name="Border"  CornerRadius="5,5,5,5" >
+                            <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center" 
+                                        Margin="1,2"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border"  Property="Background" Value="#D704756D" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#FF2B2C2D" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+    
+    <Grid Background="#FF2E2E2E" >
+
+
+        <TabControl x:Name="tabControl"  Background="Black" BorderBrush="Black" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" >
+
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem" >
+                                <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Black" CornerRadius="5,5,5,5" Margin="2,0">
+                                    <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border"  Property="Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
+                                                    <LinearGradientBrush.RelativeTransform>
+                                                        <TransformGroup>
+                                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                                            <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5"/>
+                                                            <TranslateTransform/>
+                                                        </TransformGroup>
+                                                    </LinearGradientBrush.RelativeTransform>
+                                                    <GradientStop Color="#FF008DE8" Offset="0"/>
+                                                    <GradientStop Color="#FF02404C" Offset="1"/>
+                                                  
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Border"  Property="Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
+                                                    <LinearGradientBrush.RelativeTransform>
+                                                        <TransformGroup>
+                                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                                            <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5"/>
+                                                            <TranslateTransform/>
+                                                        </TransformGroup>
+                                                    </LinearGradientBrush.RelativeTransform>
+                                                    <GradientStop Color="#FF02404C" Offset="1"/>
+                                                    <GradientStop Color="#FF3093A5" Offset="0.01"/>
+
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+
+
+
+        </TabControl>
+        <Button x:Name="addBtn" Width="30" Style="{DynamicResource Buttoneffect}" Height="30"  Background="#FF2B2C2D" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,1,0,0" Click="addBtnClick" >
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="30" Color="#FF20465D"/>
+            </Button.Effect>
+            <Image Source="/insert_column_96px.png" Width="20"  Height="20"/>
+        </Button>
+
+
+    </Grid>
+</Window>
